@@ -9,6 +9,11 @@ app.use(express.json());
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLSH40bpmVMzbNfrw3OS7DcHYK1048WaX3vULkO4rEU8s--t0J782jUYbBXkULPS04/exec";
 
+app.use(cors({
+  origin: "*", // yoki domen yozasan
+  methods: ["GET", "POST"]
+}));
+
 // Lead saqlash
 app.post("/webinar", async (req, res) => {
   try {
