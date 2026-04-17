@@ -27,7 +27,7 @@ app.post("/webinar", async (req, res) => {
     res.json({ success: true });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: "xatolik" });
+    res.status(500).json({ error: error.message || "xatolik" });
   }
 });
 
